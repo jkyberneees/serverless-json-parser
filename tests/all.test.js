@@ -40,6 +40,15 @@ describe('Test Suite', () => {
     done()
   })
 
+  it('should skip parsing due missing header', function (done) {
+    const req = createRequest(true)
+    delete req.headers['content-type']
+
+    middleware(req, {}, () => {})
+
+    done()
+  })
+
   it('should fail parsing with 415 error code', function (done) {
     const req = createRequest(true)
     const res = { statusCode: 200, end: () => {} }
