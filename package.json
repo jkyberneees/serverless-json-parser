@@ -1,6 +1,6 @@
 {
   "name": "serverless-json-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple JSON parser for AWS Lambda + HTTP integration via serverless-http",
   "main": "index.js",
   "scripts": {
